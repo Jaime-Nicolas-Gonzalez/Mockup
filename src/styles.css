@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* Agregar la importación de Bootstrap al archivo styles.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+    --color-primario: #1EBA88; /* Variable para el color primario */
+    --color-secundario: #1C8C90; /* Variable para el color secundario */
+    --color-letra: #CBD8E0; /* Variable para el color secundario */
+    --color-fondo: #587988
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

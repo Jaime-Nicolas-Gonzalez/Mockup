@@ -1,0 +1,56 @@
+<button style="position: fixed; top: 0; right: 0;" class="btn btn-secondary" routerLink="/home">
+  Home
+</button>
+
+<div class="container">
+    <div class="row">
+            <div *ngFor="let hero of heroes" class="card col-lg-4 col-md-6 mb-4">
+              <img *ngIf="hero.images?.lg" [src]="hero.images.lg" class="card-img-top" alt="{{ hero.name }} Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ hero.name }}</h5>
+          
+                <div class="card-text">
+                  <strong>Powerstats:</strong>
+                  <ul>
+                    <li><strong>Intelligence:</strong> {{ hero.powerstats.intelligence }}</li>
+                    <li><strong>Strength:</strong> {{ hero.powerstats.strength }}</li>
+                    <li><strong>Speed:</strong> {{ hero.powerstats.speed }}</li>
+                    <li><strong>Durability:</strong> {{ hero.powerstats.durability }}</li>
+                    <li><strong>Power:</strong> {{ hero.powerstats.power }}</li>
+                    <li><strong>Combat:</strong> {{ hero.powerstats.combat }}</li>
+                  </ul>
+                </div>
+          
+                <div class="card-text">
+                  <strong>Appearance:</strong>
+                  <ul>
+                    <li><strong>Gender:</strong> {{ hero.appearance.gender }}</li>
+                    <li><strong>Height:</strong> {{ hero.appearance.height[0] }} ({{ hero.appearance.height[1] }})</li>
+                    <li><strong>Weight:</strong> {{ hero.appearance.weight[0] }} ({{ hero.appearance.weight[1] }})</li>
+                    <li><strong>Eye Color:</strong> {{ hero.appearance.eyeColor }}</li>
+                    <li><strong>Hair Color:</strong> {{ hero.appearance.hairColor }}</li>
+                  </ul>
+                </div>
+          
+                <div class="card-text">
+                  <strong>Biography:</strong>
+                  <ul>
+                    <li><strong>Full Name:</strong> {{ hero.biography.fullName }}</li>
+                    <li><strong>Alter Egos:</strong> {{ hero.biography.alterEgos }}</li>
+                    <!-- Agrega más propiedades de la biografía según sea necesario -->
+                  </ul>
+                </div>
+          
+                <div class="card-text">
+                  <strong>Connections:</strong>
+                  <ul>
+                    <li><strong>Group Affiliation:</strong> {{ hero.connections.groupAffiliation }}</li>
+                    <li><strong>Relatives:</strong> {{ hero.connections.relatives }}</li>
+                    <!-- Agrega más propiedades de las conexiones según sea necesario -->
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+    </div>
+</div>
